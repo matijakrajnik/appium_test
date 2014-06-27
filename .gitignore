@@ -1,2 +1,3 @@
 *.swp
-config/sauce_credentials.rb
+config/sauce_credentials.yml
+
