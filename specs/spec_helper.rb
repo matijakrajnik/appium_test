@@ -1,9 +1,5 @@
 require 'rspec'
 
-RSpec.configure do |c|
-  c.treat_symbols_as_metadata_keys_with_true_values = true
-end
-
 APP_PATH = './UICatalog.app'
 
 def desired_caps

@@ -9,13 +9,6 @@ describe 'UI Catalog' do
     Appium::Driver.new(desired_caps).start_driver
     Appium.promote_appium_methods RSpec::Core::ExampleGroup
   end
-
-  def back_click(opts={})
-    opts        ||= {}
-    search_wait = opts.fetch(:wait, 10) # seconds
-    wait(search_wait) { button_exact('Back').click }
-  end
-
   after(:all) do
     driver_quit
   end
