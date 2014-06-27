@@ -20,7 +20,7 @@ def desired_caps
 end
 
 def set_env_variables
-  sauce_credentials = YAML.load_file('specs/sauce_credentials.yml')
+  sauce_credentials = YAML.load_file('config/sauce_credentials.yml')
   `declare -r SAUCE_USERNAME="#{sauce_credentials[SAUCE_USERNAME]}"`
   `declare -r SAUCE_ACCESS_KEY="#{sauce_credentials[SAUCE_ACCESS_KEY]}"`
 end
