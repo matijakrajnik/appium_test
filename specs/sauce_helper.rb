@@ -1,4 +1,5 @@
 require 'rspec'
+require 'yaml'
 
 ZIP_PATH = './UICatalog.zip'
 ZIP_FILENAME = File.basename(ZIP_PATH)
@@ -19,8 +20,9 @@ def desired_caps
 end
 
 def set_env_variables
-  `declare -r SAUCE_USERNAME=""`
-  `declare -r SAUCE_ACCESS_KEY=""`
+  sauce_credentials = YAML.load_file('specs/sauce_credentials.yml')
+  `declare -r SAUCE_USERNAME="#{sauce_credentials[SAUCE_USERNAME]}"`
+  `declare -r SAUCE_ACCESS_KEY="#{sauce_credentials[SAUCE_ACCESS_KEY]}"`
 end
 
 def unset_env_variables
