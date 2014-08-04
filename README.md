@@ -35,3 +35,6 @@ Run test example with
 ```
 rspec specs/test.rb
 ```
+
+### Appium documentation
+Appim documentation with available methods can be found [here](http://rdoc.info/github/appium/ruby_lib/Appium).
