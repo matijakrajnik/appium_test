@@ -4,6 +4,10 @@ To run appium server change location to directory with installed appium and exec
 ```
 node .
 ```
+If encountered problems with iOS Instruments run command:
+```
+npm install  appium-instruments
+```
 
 ### Inspect application elements
 First, get local copy of this repository with
